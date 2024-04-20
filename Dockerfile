@@ -10,7 +10,7 @@ COPY pom.xml .
 
 RUN mvn clean package -DskipTests=true
 
-RUN cp target/*.jar app.jar
+RUN cp target/*.jar /app.jar
 
 
-ENTRYPOINT [ "java", "-jar", "app.jar" ]
+ENTRYPOINT [ "java", "-jar", "/app.jar" ]
