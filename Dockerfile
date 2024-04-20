@@ -18,4 +18,4 @@ FROM openjdk:17-alpine
 WORKDIR /app
 COPY --from=maven /app/target/*.jar /app/app.jar
 
-ENTRYPOINT [ "java", "-jar", "/app.jar" ]
+ENTRYPOINT [ "java", "-jar", "/app/app.jar" ]
