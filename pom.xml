@@ -59,7 +59,7 @@
 				<version>1.6.0</version>
 				<executions>
 					<execution>
-						<?m2e execute onConfiguration?>
+						<?m2e ignore?>
 						<phase>validate</phase>
 						<goals>
 							<goal>exec</goal>
