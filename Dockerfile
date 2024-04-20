@@ -13,7 +13,6 @@ COPY pom.xml .
 RUN cd /src/main/webapp && \
     npm install && \
     npm run build && \
-    cp -r dist ../resources/static && \
     cd ../../..
 
 RUN mvn clean package -DskipTests=true
