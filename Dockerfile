@@ -10,10 +10,7 @@ COPY src/ ./src/
 COPY pom.xml .
 
 
-RUN cd /src/main/webapp && \
-    npm install && \
-    npm run build && \
-    pwd &&
+RUN cd src/main/webapp && npm install && npm run build && pwd
 
 RUN cd ../../..
 
