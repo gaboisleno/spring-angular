@@ -4,14 +4,17 @@ RUN apk add openjdk17-jdk
 RUN apk add --update nodejs npm
 RUN apk add maven
 
+WORKDIR /app
+
 COPY src/ ./src/
 COPY pom.xml .
 
 
-RUN cd /src/main/webapp && npm install && npm run build
-RUN cp dist ../resources/static
-
-RUN cd ../../..
+RUN cd /src/main/webapp && \
+    npm install && \
+    npm run build && \
+    cp -r dist ../resources/static && \
+    cd ../../..
 
 RUN mvn clean package -DskipTests=true
 
