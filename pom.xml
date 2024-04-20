@@ -52,7 +52,7 @@
 
 	<build>
 		<plugins>
-			<!--plugin>
+			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.6.0</version>
@@ -69,7 +69,7 @@
 					<workingDirectory>src/main/webapp</workingDirectory>
 					<arguments>build</arguments>
 				</configuration>
-			</!plugin-->
+			</plugin>
 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
