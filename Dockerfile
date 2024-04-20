@@ -1,7 +1,5 @@
 FROM alpine
 
-WORKDIR /app
-
 RUN apk add openjdk17-jdk
 RUN apk add --update nodejs npm
 RUN npm i -g @angular/cli
@@ -12,7 +10,7 @@ COPY pom.xml .
 
 RUN mvn clean package -DskipTests=true
 
-RUN cp /app/target/*.jar /app/app.jar
+RUN cp target/*.jar app.jar
 
 
 ENTRYPOINT [ "java", "-jar", "/app.jar" ]
