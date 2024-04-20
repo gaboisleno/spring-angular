@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine AS build
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ COPY pom.xml .
 
 RUN mvn clean package -DskipTests=true
 
-COPY /app/target/*.jar /app/app.jar
+COPY --from=build /app/target/*.jar /app/app.jar
 
 
 ENTRYPOINT [ "java", "-jar", "/app.jar" ]
