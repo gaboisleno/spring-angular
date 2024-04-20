@@ -11,7 +11,7 @@ COPY src/ ./src/
 COPY pom.xml .
 
 RUN mvn clean package -DskipTests=true
-
+RUN ls -l
 COPY /app/target/*.jar /app/app.jar
 
 
