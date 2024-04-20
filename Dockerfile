@@ -13,7 +13,9 @@ COPY pom.xml .
 RUN cd /src/main/webapp && \
     npm install && \
     npm run build && \
-    cd ../../..
+    pwd &&
+
+RUN cd ../../..
 
 RUN mvn clean package -DskipTests=true
 
