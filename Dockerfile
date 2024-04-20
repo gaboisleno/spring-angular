@@ -1,7 +1,7 @@
 #Etapa 1: Preparacion del entorno de Angular
 FROM node:18-slim AS frontend
 WORKDIR /app
-COPY src/main/webapp .
+COPY src/main/webapp ./webapp
 RUN cd webapp && npm install && npm run build
 
 #Etapa 2: Preparacion del entorno de Maven y construccion de la app
