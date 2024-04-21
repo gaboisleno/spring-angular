@@ -65,7 +65,8 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
+src/main/webapp/.angular
+
 .sass-cache/
 /connect.lock
 /coverage
