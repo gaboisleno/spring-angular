@@ -51,7 +51,7 @@ mvn spring-boot:run
 and to run Angular
 
 ```bash
-and `npm run start`
+npm run start
 ```
 
 To serve my Docker image, I'm using [https://render.com/]
